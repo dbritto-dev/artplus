@@ -107,6 +107,27 @@ body {
     font-size: 87.5%;
     background-image: url(../img/bg_arcos.png);
 }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background-color: #111; }
+::-webkit-scrollbar-thumb { background-color: #555; }
+::scrollbar { width: 8px !important; }
+::scrollbar-track { background-color: #111 !important; }
+::scrollbar-thumb { background-color: #555 !important; }
+.menu {
+    /* body and position */ 
+    display: block;
+    padding: 0; 
+    margin: 0; 
+}
+.menu li {
+    /* body and position */ 
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    /* style */
+    list-style: none;
+}
 .menu-inline { 
     /* body and position */ 
     display: block;
@@ -151,22 +172,40 @@ body {
     height: 1200px; 
     position: relative;
 }
-#body aside {
+#body .menu-aside {
     position: absolute; 
     width: 100px; 
     height: 100%; 
     top: 0; 
     left: -100px;  
-    background-color: #333; 
+    overflow-x: hidden;
+    overflow-y:  auto; 
+    background-color: #000; 
     -webkit-transition: all .5s ease; 
     -moz-transition: all .5s ease; 
     -ms-transition: all .5s ease; 
     -o-transition: all .5s ease; 
     transition: all .5s ease;
 }
-#body aside.active {
+#body .menu-aside.active {
     position: fixed;
     left: 0;
+}
+#body .menu-aside .logo {
+    margin: 10px 0;
+}
+#body .menu-aside .menu {
+    font-family: 'Oswald', sans-serif; 
+    font-weight: 300; 
+    color: #FFF; 
+    text-align: center;
+}
+#body .menu-aside .menu li {
+    padding: 10px 0 10px 5px;
+}
+#body .menu-aside .menu li a {
+    color: #FFF;
+    text-decoration: none;
 }
 #menu-main {
     /* body and position */
@@ -187,11 +226,16 @@ body {
     display: block; 
     padding: 10px 0;
     /* style */
+    color: #FFF;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+}
+#menu-main li span a {
+    color: #FFF;
+    text-decoration: none;
 }
 #menu-main li .sub-menu {
     /* body and position */
@@ -200,11 +244,12 @@ body {
     width: 100%; 
     padding: 0; 
     margin: 0; 
-    /* style */
-    color: #333; 
+    /* style */ 
+    color: #333;
     font-weight: 300; 
     letter-spacing: 1px;
-    background-color: #FFF; 
+    background-color: #FFF;
+    z-index: 10; 
 }
 #menu-main li:hover .sub-menu {
     display: block;
@@ -213,7 +258,6 @@ body {
     /* body and position */
     display: block; 
     width: 100%; 
-    padding: 10px 0;
     margin: 0;
     /* style */ 
     list-style: none; 
@@ -223,7 +267,14 @@ body {
     -o-transition: all .7s ease;
     transition: all .7s ease;
 }
-#menu-main li .sub-menu li:hover {
+#menu-main li .sub-menu li div {
+    padding: 10px 5px;
+}
+#menu-main li .sub-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+#menu-main li .sub-menu li:hover a {
     color: #FFF;
 }
 /* class */
@@ -269,6 +320,7 @@ body {
     right: 0; 
     padding: 0; 
     margin: 0;
+    z-index: 10;
 }
 .ribbon-color li {
     /* body and position */ 

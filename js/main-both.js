@@ -1,0 +1,1 @@
+$('#home .slide .slider').cycle({fx: 'scrollHorz'});

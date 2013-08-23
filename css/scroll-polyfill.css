@@ -1,0 +1,22 @@
+#body .menu-aside .jspVerticalBar {
+	width: 8px !important;
+}
+#body .menu-aside .jspPane {
+	width: 100px !important;
+	margin-left: 0 !important;
+}
+#body .menu-aside .jspTrack
+{
+    position: relative;
+    height: 100% !important;
+    background: #111 !important; /* changed from #dde */
+}
+#body .menu-aside .jspDrag
+{
+    position: relative;
+    height: 70% !important;
+    top: 0;
+    left: 0;
+    background: #555 !important; /* changed from #bbd */
+    cursor: pointer;
+}
