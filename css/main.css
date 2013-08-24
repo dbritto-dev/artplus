@@ -169,15 +169,16 @@ body {
 #body {
     /* body and position */
     width: 100%; 
-    height: 1200px; 
+    height: auto; 
     position: relative;
 }
 #body .menu-aside {
-    position: absolute; 
+    position: fixed; 
     width: 100px; 
     height: 100%; 
     top: 0; 
-    left: -100px;  
+    left: -100px; 
+    z-index: 20; 
     overflow-x: hidden;
     overflow-y:  auto; 
     background-color: #000; 
@@ -188,7 +189,6 @@ body {
     transition: all .5s ease;
 }
 #body .menu-aside.active {
-    position: fixed;
     left: 0;
 }
 #body .menu-aside .logo {
@@ -206,6 +206,24 @@ body {
 #body .menu-aside .menu li a {
     color: #FFF;
     text-decoration: none;
+}
+#body .content .section ul {
+    font-family: 'Oswald', sans-serif; 
+    color: #444; 
+    font-size: .875em; 
+    text-align: center; 
+    border-top: thin solid #FF2157; 
+    margin-top: 15px;
+}
+#body .content .section ul li {
+    -webkit-transition: all 1s ease; 
+    -moz-transition: all 1s ease; 
+    -ms-transition: all 1s ease; 
+    -o-transition: all 1s ease; 
+    transition: all 1s ease;
+}
+#body .content .section ul li:hover {
+    color: #FFF;
 }
 #menu-main {
     /* body and position */
@@ -341,6 +359,24 @@ body {
     /* body and position */
     top: 30px;
 }
+/* grid */
+.grid { margin-top: 20px; }
+.block { overflow: hidden; margin: 5px 0.4901960784313725%; } /* 5 / 1020 */
+.rec_1{ width:15.68627450980392%; height:215px; }     /* 160 / 1020 */
+.rec_2{ width:15.68627450980392%; height:295px; }     /* 160 / 1020 */
+.rec_3{ width: 32.35294117647059%; height:465px; }    /* 330 / 1020 */
+.rec_4{ width: 32.35294117647059%; height:227.5px; }  /* 330 / 1020 */
+.rec_5{ width:15.68627450980392%; height:430px; }     /* 160 / 1020 */
+.rec_6{ width:15.68627450980392%; height:160px; }     /* 160 / 1020 */
+.rec_7{ width: 32.35294117647059%; height:180px; }    /* 330 / 1020 */
+.rec_8{ width: 49.01960784313725%; height:180px; }    /* 500 / 1020 */
+.rec_9{ width:15.68627450980392%; height:330px; }     /* 160 / 1020 */
+.rec_10{ width: 49.01960784313725%; height:125px; }   /* 500 / 1020 */
+.rec_11{ width:15.68627450980392%; height:275px; }    /* 160 / 1020 */
+.rec_12{ width: 32.35294117647059%; height:240px; }   /* 330 / 1020 */
+.rec_13{ width:15.68627450980392%; height:180px; }    /* 160 / 1020 */
+.rec_14{ width: 32.35294117647059%; height:415px; }   /* 330 / 1020 */
+.block img { width: 100%; }
 /* helpers */
 .fixed { position: fixed; }
 .bgc-design, .bgc-design-hover:hover { background-color: #FF2157; }

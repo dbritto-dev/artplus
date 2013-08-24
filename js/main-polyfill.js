@@ -1,17 +1,22 @@
 // use jquery to animation, animation is regular
-var bodyAsideShow = true;
+var menu_aside_show = true;
 $(window).scroll(function() {
+	var $container = $('.grid');
 	if ($(window).height() <= $(window).scrollTop()) {
-		$('#body').css({marginTop: $(window).height()});
-		if (bodyAsideShow) {
+		if (menu_aside_show) {
 			$('#body aside').animate({position: 'fixed', left: '0'}, 500);
+			$('#body .content .sections').css({position: 'relative'});
+			$('#body').css({marginTop: $(window).height()});
+			$container.packery({itemSelector: '.block'});
 		}
-		bodyAsideShow = false;
+		menu_aside_show = false;
 	} else {
-		$('#body').css({marginTop: $(window).scrollTop()});
-		if (!bodyAsideShow) {
+		if (!menu_aside_show) {
 			$('#body aside').animate({position: 'absolute', left: '-100'}, 500);
+			$('#body .content .sections').css({position: 'fixed'});
+			$('#body').css({marginTop: '0'});
+			$container.packery({itemSelector: '.block'});
 		}
-		bodyAsideShow = true;			
+		menu_aside_show = true;			
 	}
 });

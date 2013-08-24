@@ -263,9 +263,72 @@
 
             </aside>
 
-            <section class="content">
-                
-            </section>
+            <div class="content" style="height: 2500px;">
+
+                <section style="padding-left: 25%; top: 50px; position: fixed;" class="sections">
+
+                    <section style="position: relative; margin-top: 100px; min-width: 960px; width: 75%;" class="section">
+
+                        <header class="c-design" style="font: 2.15em 'Fjalla One', sans-serif;">DISEÑO</header>
+
+                        <ul class="menu-inline clearfix" style="">
+                            <li class="bgc-design-hover" style="padding: 10px 0; width: 14.2857142857%;">TIPIGRAFÍA Y CALIGRAFÍA</li>
+                            <li class="bgc-design-hover" style="padding: 10px 0; width: 14.2857142857%;">IDENTIDAD</li>
+                            <li class="bgc-design-hover" style="padding: 10px 0; width: 14.2857142857%;">EDITORIAL Y PUBLICITARIO</li>
+                            <li class="bgc-design-hover" style="padding: 10px 0; width: 14.2857142857%;">DISEÑO WEB</li>
+                            <li class="bgc-design-hover" style="padding: 10px 0; width: 14.2857142857%;">DISEÑO INDUSTRIAL</li>
+                            <li class="bgc-design-hover" style="padding: 10px 0; width: 14.2857142857%;">DISEÑO DE MODAS</li>
+                            <li class="bgc-design-hover" style="padding: 10px 0; width: 14.2857142857%;">DISEÑO DE INTERIORES</li>
+                        </ul>
+
+                        <div class="wrapper-grid">
+                            
+                            <div class="grid">
+                                <div class=" block rec_1">
+                                    <img src="img/design/prueba_a.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                <div class=" block rec_2">
+                                    <img src="img/design/prueba_b.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                <div class=" block rec_3">
+                                    <img src="img/design/prueba_f.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                
+                                <div class=" block rec_4">
+                                    <img src="img/design/prueba_g.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                <div class=" block rec_4">
+                                    <img src="img/design/prueba_h.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                <div class=" block rec_5">
+                                    <img src="img/design/prueba_c.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                <div class=" block rec_6">
+                                    <img src="img/design/prueba_d.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                <div class=" block rec_7">
+                                    <img src="img/design/prueba_e.jpg" height="100%" width="100%"/>
+                                </div>
+                                
+                                <div class=" block rec_8">
+                                    <img src="img/design/prueba_i.jpg" height="100%" width="100%"/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </section>
+
+            </div>
 
         </div>
 
@@ -283,7 +346,11 @@
                     }
                 },
                 {
-                    load: 'js/plugins.js'
+                    load: 'js/plugins.js',
+                    complete: function() {
+                        var $container = $('.grid');
+                        $container.packery({itemSelector: '.block'});
+                    }
                 },
                 {
                     test: Modernizr.csstransitions,
