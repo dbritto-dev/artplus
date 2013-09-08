@@ -7,7 +7,6 @@ $(window).scroll(function() {
 			$('#body aside').animate({position: 'fixed', left: '0'}, 500);
 			$('#body .content .sections').css({position: 'relative'});
 			$('#body').css({marginTop: $(window).height()});
-			$container.packery({itemSelector: '.block'});
 		}
 		menu_aside_show = false;
 	} else {
@@ -15,7 +14,6 @@ $(window).scroll(function() {
 			$('#body aside').animate({position: 'absolute', left: '-100'}, 500);
 			$('#body .content .sections').css({position: 'fixed'});
 			$('#body').css({marginTop: '0'});
-			$container.packery({itemSelector: '.block'});
 		}
 		menu_aside_show = true;			
 	}
