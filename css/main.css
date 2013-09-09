@@ -258,7 +258,7 @@ a {
 #body .content .sections .section header {
     font: 2.15em 'Fjalla One', sans-serif;
 }
-#body .content .sections .section ul {
+#body .content .sections .section > ul {
     font-family: 'Oswald', sans-serif; 
     color: #444; 
     font-size: .875em; 
@@ -266,41 +266,41 @@ a {
     border-top: thin solid #FF2157; 
     margin-top: 15px;
 }
-#body .content .sections .section ul li {
+#body .content .sections .section ul > li {
     -webkit-transition: all .7s ease; 
     -moz-transition: all .7s ease; 
     -ms-transition: all .7s ease; 
     -o-transition: all .7s ease; 
     transition: all .7s ease;
 }
-#body .content .sections .section ul li:hover {
+#body .content .sections .section ul > li:hover {
     color: #FFF;
 }
-#body .content .sections .section.design ul li {
+#body .content .sections .section.design > ul li {
     width: 14.2857142857%;
     padding: 10px 0; 
 }
-#body .content .sections .section.architecture ul li {
+#body .content .sections .section.architecture > ul li {
     width: 25%;
     padding: 10px 0; 12.5
 }
-#body .content .sections .section.paint ul li {
+#body .content .sections .section.paint > ul li {
     width: 12.5%;
     padding: 10px 0; 
 }
-#body .content .sections .section.photography ul li {
+#body .content .sections .section.photography > ul li {
     width: 25%;
     padding: 10px 0;
 }
-#body .content .sections .section.mixed ul li {
+#body .content .sections .section.mixed > ul li {
     width: 33.3333333333%;
     padding: 10px 0;
 }
-#body .content .sections .section.sculpture ul li {
+#body .content .sections .section.sculpture > ul li {
     width: 25%;
     padding: 10px 0;
 }
-#body .content .sections .section.dynamics ul li {
+#body .content .sections .section.dynamics > ul li {
     width: 33.3333333333%;
     padding: 10px 0;
 }
@@ -405,6 +405,21 @@ a {
     /* style */
     opacity: 1;
     filter: alpha(opacity=100);     
+}
+.section > .nav { 
+    position: relative;
+    width: 70px;
+    height: 81px;
+    right: 0; 
+    margin: 0 auto;
+    border: none !important;
+    background: transparent url(../img/icon_exagono_negro.png) no-repeat;
+}
+.section > .nav li {
+    width: 35px !important;
+    height: 81px;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .ribbon-color {
     /* body and position */ 
