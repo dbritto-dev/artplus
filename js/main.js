@@ -7,6 +7,7 @@ $(window).scroll(function() {
 			$('#body aside').toggleClass('active');
 			$('#body .content .sections').css({position: 'relative'});
 			$('#body').css({marginTop: $(window).scrollTop()});
+			$container.packery();
 		}
 		menu_aside_show = false;
 	} else {
@@ -14,6 +15,7 @@ $(window).scroll(function() {
 			$('#body aside').toggleClass('active');
 			$('#body .content .sections').css({position: 'fixed'});
 			$('#body').css({marginTop: '0'});
+			$container.packery();
 		}
 		menu_aside_show = true;			
 	}

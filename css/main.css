@@ -112,6 +112,7 @@ a {
     color: #fff;
     text-decoration: none; 
 }
+img { max-width: 100%; }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background-color: #111; }
 ::-webkit-scrollbar-thumb { background-color: #555; }
@@ -246,13 +247,13 @@ a {
 }
 #body .content .sections {
     position: fixed;
+    width: 75%; 
     top: 50px; 
     padding-left: 13.5%; 
 }
 #body .content .sections .section {
     position: relative; 
     min-width: 960px; 
-    width: 80%;
     margin-top: 100px; 
 }
 #body .content .sections .section header {
@@ -469,6 +470,7 @@ a {
 .rec_12{ width: 32.35294117647059%; height:240px; }   /* 330 / 1020 */
 .rec_13{ width:15.68627450980392%; height:180px; }    /* 160 / 1020 */
 .rec_14{ width: 32.35294117647059%; height:415px; }   /* 330 / 1020 */
+.block img { width: 100%; }
 .block .info {
     display: block; 
     position: absolute; 
