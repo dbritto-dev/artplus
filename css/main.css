@@ -291,7 +291,13 @@ img { max-width: 100%; }
     position: fixed;
     width: 1020px; 
     top: 50px; 
-    padding-left: 12.5%; 
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
+     transform: translateX(-50%); 
+     /* margin-left: -510px; */
 }
 #body .content .sections .section {
     position: relative; 
