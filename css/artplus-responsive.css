@@ -1,0 +1,14 @@
+/*===================================================
+          Rebuild CSS - using OOCSS and BEM 
+  ===================================================*/
+
+@media (max-width: 320px) { }
+@media (max-width: 480px) { }
+@media (max-width: 767px) { }
+@media (min-width: 768px) { }
+@media (min-width: 992px) { }
+@media (min-width: 1200px) { }
+
+/*===================================
+          End Rebuild CSS
+  ===================================*/
