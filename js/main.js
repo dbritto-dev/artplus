@@ -1,25 +1,19 @@
-$('.header__slide').cycle({
-  fx: 'scrollHorz',
-  timeout: 6000,
-  speed: 600
-});
-
-/* prototype */
-var ArrayProto = Array.prototype, 
-    ObjProto = Object.prototype, 
-    FuncProto = Function.prototype;
-/* native */
-var slice = ArrayProto.slice;
-/* extend */
-var overrideProperties = function(obj) {
-  var override = slice.call(arguments, 1)[0];
-  for (var prop in obj) {
-    obj[prop] = override[prop] || obj[prop];
+/* help functions */
+var extend = function(out) {
+  out = out || {};
+  for (var i = 1; i < arguments.length; i++) {
+    if (!arguments[i])
+      continue;
+    for (var key in arguments[i]) {
+      if (arguments[i].hasOwnProperty(key))
+        out[key] = arguments[i][key];
+    }
   }
-  return obj;
+  return out;
 };
+/* aside menu */
 var scrollPoint = function(options) {
-  var setting = overrideProperties({
+  var setting = extend({
     context: window,
     enable: true,
     offset: 0,
@@ -28,11 +22,11 @@ var scrollPoint = function(options) {
     handler: function() {}
   }, options || {});
   setting.context.onscroll = function() {
-    if (setting.offset <= setting.context[setting.scrollOrientation]) {
-      if (setting.enable) setting.handler();
+    if (setting.offset <= setting.context[ setting.scrollOrientation ]) {
+      if ( setting.enable ) setting.handler();
       setting.enable = false;
-    } else if (!setting.triggerOnce) {
-      if (!setting.enable) setting.handler();
+    } else if ( !setting.triggerOnce ) {
+      if ( !setting.enable ) setting.handler();
       setting.enable = true;
     }
   };
@@ -40,6 +34,19 @@ var scrollPoint = function(options) {
 scrollPoint({
   offset: window.innerHeight || window.clientHeight,
   handler: function() {
-    document.querySelector('.sidebar').classList.toggle('sidebar--active');
+    var _sidebar = document.querySelector('.sidebar'),
+        _header = document.querySelector('.header');
+        _articles = document.querySelector('.articles'),
+        _footer = document.querySelector('.footer');
+    _sidebar.classList.toggle('sidebar--active');
+    _header.classList.toggle('header--inactive');
+    _articles.classList.toggle('articles--active');
+    _footer.classList.toggle('footer--active');
   }
+});
+/*  slider */
+$('.header__slide').cycle({
+  fx: 'scrollHorz',
+  timeout: 6000,
+  speed: 600
 });
