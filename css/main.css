@@ -159,8 +159,8 @@ a {
 }
 .nav>li { margin: 0 0 0 2px; }
 .nav--social-networks {
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   font-size: 10px;
 }
 .nav--social-networks>li>a {
@@ -187,8 +187,8 @@ a {
 .nav--social-networks .icon-social--google-plus:hover { background-color: #dd4b39; }
 .nav--social-networks .icon--youtube:hover { background-color: #cc181e; }
 .nav--user {
-  top: 30px; 
-  right: 15px; 
+  top: 20px; 
+  right: 20px; 
   font-size: 10px;
 }
 .nav--user>li:first-child { margin-right: 5px; }
@@ -392,8 +392,10 @@ a {
 .articles {
   position: fixed;
   width: 100%;   
-  padding-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 100px;
   background-image: url(//subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/arches.png);
+  z-index: 10;
 }
 .articles__container {
   width: 1020px;
@@ -401,8 +403,7 @@ a {
 }
 .articles article {
   clear: both;
-  margin: 0;
-  padding: 0;
+  margin-top: 20px;
 }
 .articles article>header {
   font: 2.15em 'Fjalla One', sans-serif;
@@ -426,6 +427,50 @@ a {
   transition: background-color .7s ease, color .35s ease;
 }
 .articles article>menu>li>a:hover { color: #fff; }
+.articles article>.images { margin-top: 15px; }
+.articles article>.images .image { overflow: hidden; }
+.articles article>.images .image>img { width: 100%; }
+.articles article>.images .image>.image__info {
+  position: absolute; 
+  width: 100%; 
+  height: 100px; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  background-color: rgba(0,0,0,.9); 
+  text-transform: uppercase;
+  vertical-align: top; 
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -moz-transition: -moz-transform .5s ease-out;
+  -ms-transition: -ms-transform .5s ease-out;
+  -o-transition: -o-transform .5s ease-out;
+  transition: transform .5s ease-out;
+}
+.articles article>.images>.image>.image__info>.wrapper { padding: 10px; }
+.articles article>.images>.image>.image__info .image__info__title { display: block; }
+.articles article>.images>.image>.image__info .image__info__category {
+  display: block; 
+  font-size: .75em;
+}
+.articles article>.nav {
+  position: relative;
+  font-size: 10px; 
+  text-align: center;
+}
+.articles article>.nav .nav__button {
+  font-size: 10em;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
 /* article design */
 .articles .design>menu { border-top: thin solid #ff2157; }
 .articles .design>menu>li {
@@ -484,6 +529,18 @@ a {
 }
 /* footer */
 .footer {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 200%;
   background: #111 url(../img/borde_contact.png) repeat-x 0 -1px;
 }
@@ -510,6 +567,14 @@ a {
 .sidebar__nav__sidenav .dropdown>.dropdown-menu>.list>li>a:hover { background-color: #fff; }
 /* articles */
 .articles--active { position: static; }
+.articles article>.images .image:hover>.image__info {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+.articles article>.nav .nav__button:hover { color: #fac600; }
 /* footer */
 .footer--active { min-height: 100%; }
 

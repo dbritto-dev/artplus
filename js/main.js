@@ -1,12 +1,14 @@
 /* help functions */
 var extend = function(out) {
   out = out || {};
-  for (var i = 1; i < arguments.length; i++) {
-    if (!arguments[i])
+  var i = 1,
+      l = arguments.length;
+  for ( ; i < l; i++ ) {
+    if ( !arguments[ i ] )
       continue;
-    for (var key in arguments[i]) {
-      if (arguments[i].hasOwnProperty(key))
-        out[key] = arguments[i][key];
+    for (var key in arguments[ i ]) {
+      if ( arguments[ i ].hasOwnProperty(key) )
+        out[ key ] = arguments[ i ][ key ];
     }
   }
   return out;
@@ -20,9 +22,9 @@ var scrollPoint = function(options) {
     scrollOrientation:'scrollY', 
     triggerOnce: false,
     handler: function() {}
-  }, options || {});
+  }, options || {} );
   setting.context.onscroll = function() {
-    if (setting.offset <= setting.context[ setting.scrollOrientation ]) {
+    if ( setting.offset <= setting.context[ setting.scrollOrientation ] ) {
       if ( setting.enable ) setting.handler();
       setting.enable = false;
     } else if ( !setting.triggerOnce ) {
@@ -50,3 +52,6 @@ $('.header__slide').cycle({
   timeout: 6000,
   speed: 600
 });
+/* grid packery */
+var $container = $('.grid');
+$container.packery( {itemSelector: '.e'} );
