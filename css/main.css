@@ -65,6 +65,12 @@ body {
 body {
   font-size: 87.5%;
   font-weight: 300;
+  /* custom scorllbar to IE */
+  scrollbar-base-color: #fff;
+  scrollbar-face-color: #7f7f7f;
+  scrollbar-face-color: rgba(0,0,0,.8);
+  scrollbar-arrow-color: #fff;
+  scrollbar-arrow-color: transparent;
 }
 a {
   color: #fff; 
@@ -620,5 +626,14 @@ a {
 .c-dynamics, 
 .c-hover-dynamics:hover { color: #d21600 !important; } 
 /* theme for scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,.45); }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-thumb {
+  background-color: #7f7f7f;
+  background-color: rgba(0,0,0,.8);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: 3px solid #FFF;
+}

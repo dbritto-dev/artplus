@@ -2,11 +2,12 @@
 var extend = function(out) {
   out = out || {};
   var i = 1,
-      l = arguments.length;
+      l = arguments.length,
+      key;
   for ( ; i < l; i++ ) {
     if ( !arguments[ i ] )
       continue;
-    for (var key in arguments[ i ]) {
+    for (key in arguments[ i ]) {
       if ( arguments[ i ].hasOwnProperty(key) )
         out[ key ] = arguments[ i ][ key ];
     }
