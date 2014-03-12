@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="es">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Art+</title>
         <meta name="description" content="">
@@ -18,10 +18,10 @@
         </ul>
         <!--========== art+ | nav - social networks ==========-->
         <ul class="list list--inline nav nav--social-networks">
-            <li><a href="#" title="facebook" class="icon-social icon-social--facebook">&#62220;</a></li><!--
-            --><li><a href="#" title="twitter" class="icon-social icon-social--twitter">&#62217;</a></li><!--
-            --><li><a href="#" title="google+" class="icon-social icon-social--google-plus">&#62223;</a></li><!--
-            --><li><a href="#" title="youtube" class="icon icon--youtube">&#127916;</a></li>
+            <li><a href="#" title="facebook" class="icon-social bgc-hover-facebook">&#62220;</a></li><!--
+            --><li><a href="#" title="twitter" class="icon-social bgc-hover-twitter">&#62217;</a></li><!--
+            --><li><a href="#" title="google+" class="icon-social bgc-hover-google-plus">&#62223;</a></li><!--
+            --><li><a href="#" title="youtube" class="icon bgc-hover-youtube">&#127916;</a></li>
         </ul>
         <!--========== art+ | header ==========-->
         <header class="header">
@@ -116,6 +116,12 @@
                 <img src="img/slider-2.jpg" alt="">
                 <img src="img/slider-3.jpg" alt="">
             </div>
+            <ul class="list list--inline header__social-networks">
+                <li><a href="#" title="facebook" class="icon-social bgc-hover-facebook bdc-facebook">&#62220;</a></li>
+                <li><a href="#" title="twitter" class="icon-social bgc-hover-twitter bdc-twitter">&#62217;</a></li>
+                <li><a href="#" title="google+" class="icon-social bgc-hover-google-plus bdc-google-plus">&#62223;</a></li>
+                <li><a href="#" title="youtube" class="icon bgc-hover-youtube bdc-youtube">&#127916;</a></li>
+            </ul>
         </header>
         <!--========== art+ | aside ==========-->
         <aside class="sidebar">
@@ -205,10 +211,10 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="list">
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="list sidebar__nav__sideuser">
+                    <li><a href="#" title="compartir" class="icon">&#59196;</a></li>
+                    <li><a href="#" title="miembros" class="icon">&#128101;</a></li>
+                    <li><a href="#footer" title="mensaje" class="icon">&#128319;</a></li>
                 </ul>
             </nav>
         </aside>
@@ -325,16 +331,83 @@
                         --><li><a href="#" class="bgc-hover-architecture">paisajismo</a></li>
                     </menu>
                     <section class="grid images">
-                        <div class="e w1 h2 image" style="background-color: #111;"></div>
-                        <div class="e w1 h3 image" style="background-color: #777;"></div>
-                        <div class="e w2 h4 image" style="background-color: #333;"></div>
-                        <div class="e w2 h2 image" style="background-color: #555;"></div>
-                        <div class="e w2 h2 image" style="background-color: cyan;"></div>
-                        <div class="e w1 h3 image" style="background-color: #ccc;"></div>
-                        <div class="e w1 h1 image" style="background-color: #999;"></div>
-                        <div class="e w3 h1 image" style="background-color: lightblue;"></div>
-                        <div class="e w2 h1 image" style="background-color: lightgreen;"></div>    
+                        <div class="e w1 h2 image" style="background-color: #111;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #777;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h4 image" style="background-color: #333;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: #555;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: cyan;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #ccc;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h1 image" style="background-color: #999;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w3 h1 image" style="background-color: lightblue;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h1 image" style="background-color: lightgreen;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>    
                     </section>
+                    <ul class="list list--inline nav">
+                        <li class="icon nav__button nav__button--previous" title="anterior">&#59237;</li><!--
+                        --><li class="icon nav__button nav__button--next" title="siguiente">&#59238;</li>
+                    </ul>
                 </article>
                 <!--========== art+ | main - article paint ==========-->
                 <article class="paint">
@@ -349,16 +422,83 @@
                         --><li><a href="#" class="bgc-hover-paint">contemporánea</a></li>
                     </menu>
                     <section class="grid images">
-                        <div class="e w1 h2 image" style="background-color: #111;"></div>
-                        <div class="e w1 h3 image" style="background-color: #777;"></div>
-                        <div class="e w2 h4 image" style="background-color: #333;"></div>
-                        <div class="e w2 h2 image" style="background-color: #555;"></div>
-                        <div class="e w2 h2 image" style="background-color: cyan;"></div>
-                        <div class="e w1 h3 image" style="background-color: #ccc;"></div>
-                        <div class="e w1 h1 image" style="background-color: #999;"></div>
-                        <div class="e w3 h1 image" style="background-color: lightblue;"></div>
-                        <div class="e w2 h1 image" style="background-color: lightgreen;"></div>    
+                        <div class="e w1 h2 image" style="background-color: #111;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #777;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h4 image" style="background-color: #333;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: #555;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: cyan;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #ccc;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h1 image" style="background-color: #999;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w3 h1 image" style="background-color: lightblue;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h1 image" style="background-color: lightgreen;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>    
                     </section>
+                    <ul class="list list--inline nav">
+                        <li class="icon nav__button nav__button--previous" title="anterior">&#59237;</li><!--
+                        --><li class="icon nav__button nav__button--next" title="siguiente">&#59238;</li>
+                    </ul>
                 </article>
                 <!--========== art+ | main - article photography ==========-->
                 <article class="photography">
@@ -370,16 +510,83 @@
                         --><li><a href="#" class="bgc-hover-photography">conceptual y otros</a></li>
                     </menu>
                     <section class="grid images">
-                        <div class="e w1 h2 image" style="background-color: #111;"></div>
-                        <div class="e w1 h3 image" style="background-color: #777;"></div>
-                        <div class="e w2 h4 image" style="background-color: #333;"></div>
-                        <div class="e w2 h2 image" style="background-color: #555;"></div>
-                        <div class="e w2 h2 image" style="background-color: cyan;"></div>
-                        <div class="e w1 h3 image" style="background-color: #ccc;"></div>
-                        <div class="e w1 h1 image" style="background-color: #999;"></div>
-                        <div class="e w3 h1 image" style="background-color: lightblue;"></div>
-                        <div class="e w2 h1 image" style="background-color: lightgreen;"></div>    
+                        <div class="e w1 h2 image" style="background-color: #111;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #777;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h4 image" style="background-color: #333;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: #555;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: cyan;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #ccc;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h1 image" style="background-color: #999;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w3 h1 image" style="background-color: lightblue;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h1 image" style="background-color: lightgreen;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>    
                     </section>
+                    <ul class="list list--inline nav">
+                        <li class="icon nav__button nav__button--previous" title="anterior">&#59237;</li><!--
+                        --><li class="icon nav__button nav__button--next" title="siguiente">&#59238;</li>
+                    </ul>
                 </article>
                 <!--========== art+ | main - article mixed ==========-->
                 <article class="mixed">
@@ -390,16 +597,83 @@
                         --><li><a href="#" class="bgc-hover-mixed">teatro</a></li>
                     </menu>
                     <section class="grid images">
-                        <div class="e w1 h2 image" style="background-color: #111;"></div>
-                        <div class="e w1 h3 image" style="background-color: #777;"></div>
-                        <div class="e w2 h4 image" style="background-color: #333;"></div>
-                        <div class="e w2 h2 image" style="background-color: #555;"></div>
-                        <div class="e w2 h2 image" style="background-color: cyan;"></div>
-                        <div class="e w1 h3 image" style="background-color: #ccc;"></div>
-                        <div class="e w1 h1 image" style="background-color: #999;"></div>
-                        <div class="e w3 h1 image" style="background-color: lightblue;"></div>
-                        <div class="e w2 h1 image" style="background-color: lightgreen;"></div>    
+                        <div class="e w1 h2 image" style="background-color: #111;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #777;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h4 image" style="background-color: #333;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: #555;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: cyan;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #ccc;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h1 image" style="background-color: #999;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w3 h1 image" style="background-color: lightblue;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h1 image" style="background-color: lightgreen;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>    
                     </section>
+                    <ul class="list list--inline nav">
+                        <li class="icon nav__button nav__button--previous" title="anterior">&#59237;</li><!--
+                        --><li class="icon nav__button nav__button--next" title="siguiente">&#59238;</li>
+                    </ul>
                 </article>
                 <!--========== art+ | main - article sculpture ==========-->
                 <article class="sculpture">
@@ -411,16 +685,83 @@
                         --><li><a href="#" class="bgc-hover-sculpture">contemporánea</a></li>
                     </menu>
                     <section class="grid images">
-                        <div class="e w1 h2 image" style="background-color: #111;"></div>
-                        <div class="e w1 h3 image" style="background-color: #777;"></div>
-                        <div class="e w2 h4 image" style="background-color: #333;"></div>
-                        <div class="e w2 h2 image" style="background-color: #555;"></div>
-                        <div class="e w2 h2 image" style="background-color: cyan;"></div>
-                        <div class="e w1 h3 image" style="background-color: #ccc;"></div>
-                        <div class="e w1 h1 image" style="background-color: #999;"></div>
-                        <div class="e w3 h1 image" style="background-color: lightblue;"></div>
-                        <div class="e w2 h1 image" style="background-color: lightgreen;"></div>    
+                        <div class="e w1 h2 image" style="background-color: #111;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #777;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h4 image" style="background-color: #333;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: #555;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: cyan;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #ccc;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h1 image" style="background-color: #999;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w3 h1 image" style="background-color: lightblue;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h1 image" style="background-color: lightgreen;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>    
                     </section>
+                    <ul class="list list--inline nav">
+                        <li class="icon nav__button nav__button--previous" title="anterior">&#59237;</li><!--
+                        --><li class="icon nav__button nav__button--next" title="siguiente">&#59238;</li>
+                    </ul>
                 </article>
                 <!--========== art+ | main - article dynamics ==========-->
                 <article class="dynamics">
@@ -431,43 +772,110 @@
                         --><li><a href="#" class="bgc-hover-dynamics">danza</a></li>
                     </menu>
                     <section class="grid images">
-                        <div class="e w1 h2 image" style="background-color: #111;"></div>
-                        <div class="e w1 h3 image" style="background-color: #777;"></div>
-                        <div class="e w2 h4 image" style="background-color: #333;"></div>
-                        <div class="e w2 h2 image" style="background-color: #555;"></div>
-                        <div class="e w2 h2 image" style="background-color: cyan;"></div>
-                        <div class="e w1 h3 image" style="background-color: #ccc;"></div>
-                        <div class="e w1 h1 image" style="background-color: #999;"></div>
-                        <div class="e w3 h1 image" style="background-color: lightblue;"></div>
-                        <div class="e w2 h1 image" style="background-color: lightgreen;"></div>    
+                        <div class="e w1 h2 image" style="background-color: #111;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #777;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h4 image" style="background-color: #333;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: #555;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h2 image" style="background-color: cyan;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h3 image" style="background-color: #ccc;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w1 h1 image" style="background-color: #999;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w3 h1 image" style="background-color: lightblue;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e w2 h1 image" style="background-color: lightgreen;">
+                            <div class="image__info">
+                                <div class="wrapper">
+                                    <a href="#" class="image__info__title">titulo</a>
+                                    <a href="#" class="c-design image__info__category">categoría</a>
+                                </div>
+                            </div>
+                        </div>    
                     </section>
+                    <ul class="list list--inline nav">
+                        <li class="icon nav__button nav__button--previous" title="anterior">&#59237;</li><!--
+                        --><li class="icon nav__button nav__button--next" title="siguiente">&#59238;</li>
+                    </ul>
                 </article>
             </div>
         </main>
         <!--========== art+ | footer ==========-->
         <footer class="footer">
-            <ul class="list list--inline" style="position: relative; width: 960px; margin: auto; color: #fff; font-family: 'Oswald', sans-serif;">
-                <li style="display: block; text-align: center; text-transform: uppercase; font-family: 'FJalla One', sans-serif; font-size: 1.5em; padding: 2em 0; color: #fac600;">contacto</li>
-                <li style="width: 40%; vertical-align: top;">
-                    <div style="margin-bottom: 15px;">
-                        <label for="name" style="text-transform: uppercase; display: block; margin-bottom: 5px;">nombre</label>
-                        <input type="text" name="name" id="" style="width: 88%; border: 0; outline: 0; color: #333; display: block; padding: 10px 6%;" placeholder="NOMBRE">
+            <ul class="list list--inline contact-form">
+                <li class="contact-form__header">contacto</li>
+                <li class="contact-form__group">
+                    <div>
+                        <label for="name">nombre</label>
+                        <input type="text" name="name" id="" placeholder="NOMBRE">
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <label for="email" style="text-transform: uppercase; display: block; margin-bottom: 5px;">correo electrónico</label>
-                        <input type="email" name="email" id="" style="width: 88%; border: 0; outline: 0; color: #333; display: block; padding: 10px 6%;" placeholder="CORREO ELECTRÓNICO">
+                    <div>
+                        <label for="email">correo electrónico</label>
+                        <input type="email" name="email" id="" placeholder="CORREO ELECTRÓNICO">
                     </div>
-                    <span style="font-family: monospace; font-size: .85em;">Es necesario rellenar todos para enviar el mensaje *</span>
+                    <span>Es necesario rellenar todos para enviar el mensaje *</span>
                 </li><!--
-                --><li style="width: 60%; vertical-align: top;">
-                    <textarea name="" id="" style="border: 0; outline: 0; width: 87%; height: 125px; margin-left: 5%; margin-bottom: 15px; padding: 10px 4%; color: #333;" placeholder="MENSAJE"></textarea>
-                    <ul class="list list--inline" style="text-align: right;">
-                        <li style="border: 0; outline: 0; background-color: #fff; text-transform: uppercase; color: #333; padding: 10px; cursor: pointer;">enviar</li><!--
-                        --><li style="border: 0; outline: 0; background-color: #fff; text-transform: uppercase; color: #333; padding: 10px; cursor: pointer; margin-left: 10px;">limpiar</li>
+                --><li class="contact-form__group">
+                    <textarea name="" id="" placeholder="MENSAJE"></textarea>
+                    <ul class="list list--inline buttons" style="text-align: right;">
+                        <li class="button button--send">enviar</li><!--
+                        --><li class="button button--clear">limpiar</li>
                     </ul>
                 </li>
             </ul>
-            <div style="color: #fff; text-align: center; margin: 1em 0; font-family: sans-serif;">Art+ &copy; Todos los derechos reservados. Diseñado por <a href="#" style="color: #fac600;">@gonzalo</a> y desarrollado por <a href="#" style="color: #fac600;">@danilobrinu</a></div>
+            <div class="copyright">Art+ &copy; Todos los derechos reservados. Diseñado por <a href="#">@gonzalo</a> y desarrollado por <a href="#">@danilobrinu</a></div>
         </footer>
         <!--========== art+ | javascript ==========-->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
