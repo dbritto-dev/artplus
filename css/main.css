@@ -56,6 +56,11 @@
  * basic default styles usually used for a simple selectors. Like clearfix for example. 
  */
 
+*{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;    
+          box-sizing: border-box;     
+}
 html,
 body {
   min-height: 100%;
@@ -216,27 +221,20 @@ a {
   width: 100%;
   height: 100%;
   /* if not support multiple background */
-  background-color: #222;
-  background-image: -webkit-gradient(radial, center center, 0, center center, 700, from(transparent,), to(#000));
-  background-image: -webkit-radial-gradient(circle, transparent, #000);
-  background-image:    -moz-radial-gradient(circle, transparent, #000);
-  background-image:     -ms-radial-gradient(circle, transparent, #000);
-  background-image:      -o-radial-gradient(circle, transparent, #000);
-  background-image:         radial-gradient(circle, transparent, #000);
-  background-position: center center;
+  background: url(../img/dark-bg.jpg) #0a0a0a repeat center center;
   /* if support multiple background */
-  background: -webkit-gradient(radial, center center, 0, center center, 700, from(transparent,), to(#000)),
-              url(../img/dark-bg.jpg);
-  background: -webkit-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);
-  background: -moz-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);
-  background: -ms-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);
-  background: -o-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);
-  background: radial-gradient(circle, transparent, #000) center center,
-              url(../img/dark-bg.jpg);
+  background: -webkit-gradient(radial, center center, 0, center center, 700, from(transparent,), to(#000)) #0a0a0a,
+              url(../img/dark-bg.jpg) #0a0a0a;
+  background: -webkit-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
+  background: -moz-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
+  background: -ms-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
+  background: -o-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
+  background: radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
   overflow: hidden;
 }
 .header__nav {
@@ -426,19 +424,18 @@ a {
 .sidebar__nav__sideuser {
   position: absolute; 
   bottom: 0; 
-  left: 50%; 
-  -webkit-transform: translateX(-50%);
-     -moz-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-       -o-transform: translateX(-50%);
-          transform: translateX(-50%); 
+  left: 0;
+  right: 0;  
   font-size: 10px; 
   text-align: center;
+  background-color: #111; 
 }
-.sidebar__nav__sideuser>li>a {
-  display: block; 
+.sidebar__nav__sideuser>li>a { 
+  display: inline-block;
+  *display: inline;
   width: 40px; 
   font-size: 4em;
+  zoom: 1;
 }
 /* articles */
 .articles {
@@ -601,91 +598,94 @@ a {
      -moz-flex-direction: column;
           flex-direction: column;
   /* if not support multiple background */
-  background: #222 url(../img/borde_contact.png) repeat-x 0 -1px;
+  background: url(../img/borde_contact.png) #0a0a0a repeat-x 0 -1px;
   /* if support multiple background */
   background: url(../img/borde_contact.png) repeat-x 0 -1px,
-              -webkit-gradient(radial, center center, 0, center center, 700, from(transparent,), to(#000)),
-              url(../img/dark-bg.jpg);;
+              -webkit-gradient(radial, center center, 0, center center, 700, from(transparent), to(#000)),
+              url(../img/dark-bg.jpg) #0a0a0a;
   background: url(../img/borde_contact.png) repeat-x 0 -1px,
-              -webkit-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);;
+              -webkit-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
   background: url(../img/borde_contact.png) repeat-x 0 -1px,
-              -moz-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);;
+              -moz-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
   background: url(../img/borde_contact.png) repeat-x 0 -1px,
-              -ms-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);;
+              -ms-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
   background: url(../img/borde_contact.png) repeat-x 0 -1px,
-              -o-radial-gradient(circle, transparent, #000),
-              url(../img/dark-bg.jpg);;
+              -o-radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
   background: url(../img/borde_contact.png) repeat-x 0 -1px,
-              radial-gradient(circle, transparent, #000) center center,
-              url(../img/dark-bg.jpg);
+              radial-gradient(circle, transparent, #000) no-repeat center center,
+              url(../img/dark-bg.jpg) #0a0a0a;
 }
 .footer>.contact-form {
   position: relative; 
-  width: 960px; 
-  margin: auto; 
-  font-family: 'Oswald', sans-serif;
-  color: #fff; 
+  width: 980px; 
+  margin: auto;
 }
-.footer>.contact-form input,
-.footer>.contact-form textarea {
-  border: 0; 
-  outline: 0;
-}
-.footer>.contact-form>li { vertical-align: top; }
 .footer>.contact-form>.contact-form__header {
-  display: block; 
-  padding: 2em 0; 
-  font-size: 1.5em; 
+  margin-top: 2em; 
+  margin-bottom: 2em; 
+  font-size: 1.4em;
   font-family: 'FJalla One', sans-serif; 
-  color: #fac600;
+  color: #fac600; 
   text-transform: uppercase; 
   text-align: center; 
 }
-.footer>.contact-form>.contact-form__group { width: 40%; }
-.footer>.contact-form>.contact-form__group div { margin-bottom: 15px; }
-.footer>.contact-form>.contact-form__group div label,
-.footer>.contact-form>.contact-form__group div input { display: block; }
-.footer>.contact-form>.contact-form__group div>label {
+.footer>.contact-form>.contact-form__inputs>.contact-form__inputs__block {
+  display: inline-block; 
+  *display: inline;
+  width: 50%; 
+  vertical-align: top;
+  zoom: 1;
+}
+.footer>.contact-form>.contact-form__inputs>.contact-form__inputs__block--left { padding-right: 10px; }
+}
+.footer>.contact-form>.contact-form__inputs>.contact-form__inputs__block--right { padding-left: 10px; }
+.footer>.contact-form .contact-form__inputs__group { margin-bottom: 15px; }
+.footer>.contact-form .contact-form__inputs__group>label {
+  display: block; 
   margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif; 
+  color: #fff; 
   text-transform: uppercase; 
-}
-.footer>.contact-form>.contact-form__group div>input {
-  width: 88%; 
-  padding: 10px 6%; 
-  color: #333; 
-}
-.footer>.contact-form>.contact-form__group>span {
-  font-size: .85em;
-  font-family: monospace; 
-}
-.footer>.contact-form>.contact-form__group:last-child { width: 60%; }
-.footer>.contact-form>.contact-form__group:last-child>textarea { 
-  width: 87%; 
-  height: 125px; 
-  padding: 10px 4%; 
-  margin-left: 5%; 
-  margin-bottom: 15px; 
-  color: #333;
-}
-.footer>.contact-form .buttons { text-align: right; }
-.footer>.contact-form .buttons>.button {
-  padding: 10px; 
-  text-transform: uppercase; 
-  color: #555; 
-  background-color: #fff; 
   border: 0; 
   outline: 0; 
-  cursor: pointer;
-  -webkit-transition: all .5s ease;
-     -moz-transition: all .5s ease;
-      -ms-transition: all .5s ease;
-       -o-transition: all .5s ease;
-          transition: all .5s ease;
+} 
+.footer>.contact-form .contact-form__inputs__group>input,
+.footer>.contact-form .contact-form__inputs__group>textarea {
+  width: 100%; 
+  padding: 1em;
+  border: 0; 
+  outline: 0; 
 }
-.footer>.contact-form .buttons>.button--clear { margin-left: 10px; }
+.footer>.contact-form .contact-form__inputs__group:last-child>textarea { height: 127px; }
+.footer>.contact-form>.contact-form__footer>.contact-form__footer__help-text {
+  float: left;
+  font-family: monospace; 
+  color: #fff; 
+}
+.footer>.contact-form>.contact-form__footer>.contact-form__footer__btn {
+  float: right; 
+  padding: 10px; 
+  color: #555; 
+  text-transform: uppercase; 
+  background-color: #fff;
+  border: 0; 
+  outline: 0;
+  -webkit-transition: background-color .7s ease, 
+                      color .35s ease;
+     -moz-transition: background-color .7s ease, 
+                      color .35s ease;
+      -ms-transition: background-color .7s ease, 
+                      color .35s ease;
+       -o-transition: background-color .7s ease, 
+                      color .35s ease;
+          transition: background-color .7s ease, 
+                      color .35s ease; 
+}
+.footer>.contact-form>.contact-form__footer>.contact-form__footer__btn--send { margin-left: 10px; }
 .footer>.copyright {
   margin-top: 1em;
   margin-bottom: 1em; 
@@ -727,7 +727,10 @@ a {
 .articles article>.nav .nav__button:hover { color: #fac600; }
 /* footer */
 .footer--active { min-height: 100%; }
-.footer>.contact-form .buttons>.button:hover { background-color: #fac600; }
+.footer>.contact-form>.contact-form__footer>.contact-form__footer__btn:hover {
+  color: #fff;
+  background-color: #fac600;
+}
 
 /***************************
  *          Theme          *
